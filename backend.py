@@ -208,20 +208,4 @@ class Preprocess:
         for d in d_lens:
             tfIDF[d] = tfIDF[d] / (d_lens[d] * 2)
         self.cos_sin[query] = sorted(tfIDF.items(), key=lambda item: item[1], reverse=True)
-    #
-    # def title_by_id(self, inverted):
-    #     title_dict = defaultdict(int)
-    #     for word in self.query:
-    #     try:
-    #         temp = self.read_posting_list(inverted, word)
-    #         for i in temp:
-    #             counter = Counter(self.titles[i][0].split())
-    #             try:
-    #                 title_dict[i][0] += counter[word]
-    #             except:
-    #                 pass
-    #     except:
-    #         pass
-
-
-import random
+   
